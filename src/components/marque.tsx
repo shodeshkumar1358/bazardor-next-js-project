@@ -26,12 +26,12 @@ const Marque = async () => {
                   <span className="text-base">{product.image}</span>
 
                   {/* Product Name */}
-                  <span className="text-sm font-medium text-gray-700">
+                  <span className="text-sm font-medium text-slate-950">
                     {product.nameBn}
                   </span>
 
                   {/* Price */}
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-gray-600">
                     {product.today.toLocaleString("bn-BD")} টাকা/
                     {product.unit === "kg"
                       ? "কেজি"
@@ -46,9 +46,9 @@ const Marque = async () => {
                   <span
                     className={`flex items-center gap-0.5 text-xs font-semibold ${
                       isUp
-                        ? "text-red-500"
+                        ? "text-red-700"
                         : isDown
-                          ? "text-green-600"
+                          ? "text-green-700"
                           : "text-gray-500"
                     }`}
                   >

@@ -6,9 +6,9 @@ const HeroSection = () => {
   });
 
   return (
-    <section className="bg-[#f3f7f4] px-4 py-8">
+    <section className="bg-[#edfff2dc] px-4 py-7">
       <div className="mx-auto max-w-6xl">
-        <div className="flex min-h-[420px] items-center overflow-hidden rounded-[28px] border border-[#dce5df] bg-white px-6 py-8 sm:px-8 lg:px-10">
+        <div className="flex min-h-[380px] items-center overflow-hidden rounded-[28px] border border-[#dce5df] bg-[#fbfbfb] px-2 py-5 sm:px-6 lg:px-10">
           {/* Left */}
           <div className="w-full lg:w-[60%]">
             {/* Date */}
@@ -22,7 +22,7 @@ const HeroSection = () => {
             </h2>
 
             {/* Description */}
-            <p className="mt-3 max-w-[600px] text-[15px] leading-[1.7] text-[#59645f] sm:text-base">
+            <p className="mt-2 max-w-[600px] text-[14px] leading-[1.7] text-[#59645f] sm:text-base">
               চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম ও মসলার দাম — বাজারভিত্তিক
               বিস্তারিত, গড়, সর্বনিম্ন-সর্বাধিক এবং দামের পরিবর্তন এক জায়গায়।
             </p>
@@ -30,7 +30,7 @@ const HeroSection = () => {
             {/* Button */}
             <div className="mt-6">
               <a
-                href="#"
+                href="#Anchor"
                 className="inline-flex rounded-lg bg-[#008f43] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#007a39]"
               >
                 সব পণ্য দেখুন

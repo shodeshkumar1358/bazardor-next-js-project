@@ -1,6 +1,7 @@
 import { FiShoppingCart } from "react-icons/fi";
-import Navlinks from "./navlinks";
 import Link from "next/link";
+import Navlinks from "./navlinks";
+import AuthMenu from "./AuthMenu";
 
 const Navbar = () => {
   const currentDate = new Date().toLocaleDateString("bn-BD", {
@@ -8,13 +9,13 @@ const Navbar = () => {
   });
 
   return (
-    <header>
-      <div className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white">
-        <div className="max-w-6xl mx-auto flex h-[70px] w-full items-center justify-between px-0">
-          {/* Logo */}
-          <Link href={"/"}>
+    <header className="sticky top-0 z-50 w-full">
+      {/* Main Navbar */}
+      <div className="w-full border-b border-gray-100 bg-white">
+        <div className="mx-auto flex h-[70px] w-full max-w-6xl items-center justify-between px-4 sm:px-6">
+          <Link href="/" className="shrink-0">
             <div className="flex items-center gap-[10px]">
-              <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-[#05893E] text-slate-300">
+              <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-[#05893E] text-white">
                 <FiShoppingCart size={20} strokeWidth={2} />
               </div>
 
@@ -30,26 +31,13 @@ const Navbar = () => {
             </div>
           </Link>
 
-          {/* Auth Buttons */}
-          <div className="flex items-center gap-[10px]">
-            <button
-              type="button"
-              className="h-[40px] rounded-[10px] px-[15px] text-[15px] font-semibold text-slate-800 transition-colors hover:bg-slate-300"
-            >
-              সাইন ইন
-            </button>
-
-            <button
-              type="button"
-              className="h-[40px] rounded-[10px] bg-green-600 px-[15px] text-[15px] font-semibold text-white shadow-[0_2px_4px_rgba(0,0,0,0.18)] transition-all hover:bg-green-700 hover:shadow-[0_3px_7px_rgba(0,0,0,0.2)] active:scale-[0.98]"
-            >
-              সাইন আপ
-            </button>
-          </div>
+          <AuthMenu />
         </div>
       </div>
+
+      {/* Category Navigation */}
       <div className="border-b border-gray-200 bg-white">
-        <Navlinks></Navlinks>
+        <Navlinks />
       </div>
     </header>
   );
