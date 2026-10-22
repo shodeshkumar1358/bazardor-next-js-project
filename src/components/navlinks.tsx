@@ -1,4 +1,4 @@
-import { LinkType } from "@/type/type";
+import { Category } from "@/type/type";
 import Link from "next/link";
 
 const Navlinks = async () => {
@@ -13,7 +13,7 @@ const Navlinks = async () => {
     throw new Error("Failed to fetch categories");
   }
 
-  const data: LinkType[] = await res.json();
+  const data: Category[] = await res.json();
 
   return (
     <nav className="sticky top-0 z-40 border-b-amber-50 bg-white">
