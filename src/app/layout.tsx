@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Hind_Siliguri } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { ProductsProvider } from "@/context/ProductProvider";
+
 import Footer from "@/components/Footer";
 
 const hindSiliguri = Hind_Siliguri({
@@ -28,11 +28,9 @@ export default function RootLayout({
       className={`${hindSiliguri.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <ProductsProvider>
-          <Navbar></Navbar>
-          {children}
-          <Footer></Footer>
-        </ProductsProvider>
+        <Navbar></Navbar>
+        {children}
+        <Footer></Footer>
       </body>
     </html>
   );
